@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>급식 정보 조회</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 급식 정보 조회</h1>
+            <p>원하는 날짜의 급식 정보를 확인해보세요</p>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <label for="meal-date">날짜 선택:</label>
+                <input type="date" id="meal-date" />
+                <button id="search-btn" onclick="getMealInfo()">급식 정보 조회</button>
+            </div>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>급식 정보를 불러오는 중...</p>
+            </div>
+            
+            <div id="meal-result" class="meal-result">
+                <div class="meal-info">
+                    <h2>급식 정보</h2>
+                    <div id="meal-content">
+                        <p class="no-data">날짜를 선택하고 조회 버튼을 눌러주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
